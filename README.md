@@ -1,20 +1,13 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+🎮 **Space Warz** — a retro arcade space shooter where players battle enemy fleets, collect upgrades, unleash a powerful *Sonic Boom*, survive intense swarm attacks, and take down massive sector bosses before warping deeper into space.
 
-# Run and deploy your AI Studio app
+Instead of spending days planning every mechanic, I could simply describe features like:
 
-This contains everything you need to run your app locally.
+⚡ Boss battles after each sector
+⚡ Enemy formations and progressive difficulty
+⚡ Warp transitions and safe zones
+⚡ Power-ups and weapon upgrades
+⚡ High score tracking and arcade effects
 
-View your app in AI Studio: https://ai.studio/apps/4205f4ce-cb6f-416c-b7fe-3f8d55fc492c
-
-## Run Locally
-
-**Prerequisites:**  Node.js
+…and quickly turn those ideas into working gameplay.
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
