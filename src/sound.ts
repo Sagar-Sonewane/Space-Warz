@@ -385,7 +385,7 @@ class SoundSystem {
     if (!this.isEnabled) return;
 
     if (!this.bgMusic) {
-      this.bgMusic = new Audio("/High_Score_Horizon.mp3");
+      this.bgMusic = new Audio(`${import.meta.env.BASE_URL}High_Score_Horizon.mp3`);
       this.bgMusic.loop = true;
       this.bgMusic.volume = 0.4;
     }
