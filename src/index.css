@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Press+Start+2P&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-retro: "Press Start 2P", system-ui, sans-serif;
+}
+
+/* Custom CRT scanlines overlay style */
+.crt-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.28) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.03), rgba(0, 0, 255, 0.06));
+  background-size: 100% 4px, 6px 100%;
+  z-index: 40;
+  pointer-events: none;
+}
+
+.crt-overlay::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: radial-gradient(circle, transparent 55%, rgba(0, 0, 0, 0.65) 100%);
+  z-index: 40;
+  pointer-events: none;
+}
+
+/* Immersive theme custom backgrounds */
+.immersive-bg {
+  background: radial-gradient(circle at 50% 50%, #1a1a4a 0%, #050510 100%);
+}
+
+.glow-cyan {
+  filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.8));
+}
+
+.glow-fuchsia {
+  filter: drop-shadow(0 0 10px rgba(217, 70, 239, 0.8));
+}
+
+.glow-orange {
+  filter: drop-shadow(0 0 10px rgba(249, 115, 22, 0.8));
+}
+
+.glow-green {
+  filter: drop-shadow(0 0 10px rgba(74, 222, 128, 0.6));
+}
+
+/* Retro flicker/glow animations */
+@keyframes flicker {
+  0% { opacity: 0.96; }
+  50% { opacity: 1; }
+  100% { opacity: 0.98; }
+}
+
+.neon-flicker {
+  animation: flicker 0.15s infinite;
+}
+
+.neon-title-glow {
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.9),
+               0 0 16px rgba(139, 92, 246, 0.7),
+               0 0 32px rgba(139, 92, 246, 0.4),
+               0 0 64px rgba(236, 72, 153, 0.3);
+}
+
+.neon-text-glow-blue {
+  text-shadow: 0 0 6px rgba(6, 182, 212, ...),
+               0 0 12px rgba(6, 182, 212, 0.4);
+}
+
+.neon-text-glow-purple {
+  text-shadow: 0 0 6px rgba(168, 85, 247, 0.8),
+               0 0 12px rgba(168, 85, 247, 0.4);
+}
+
+.neon-text-glow-green {
+  text-shadow: 0 0 6px rgba(34, 197, 94, 0.8),
+               0 0 12px rgba(34, 197, 94, 0.4);
+}
+
+.neon-text-glow-red {
+  text-shadow: 0 0 6px rgba(239, 68, 68, 0.8),
+               0 0 12px rgba(239, 68, 68, 0.4);
+}
+
+.neon-border-glow-blue {
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.6),
+              inset 0 0 8px rgba(6, 182, 212, 0.3);
+}
+
+.neon-border-glow-purple {
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.6),
+              inset 0 0 12px rgba(168, 85, 247, 0.3);
+}
+
+/* Grid overlay background */
+.retro-grid {
+  background-image: 
+    linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: #a855f7;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c084fc;
+}

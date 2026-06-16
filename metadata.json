@@ -1,0 +1,6 @@
+{
+  "name": "Space Warz",
+  "description": "An action-packed retro space shooter with high-octane 60 FPS gameplay, dynamic particle systems, power-ups, retro sound synthesis, and localStorage persistence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
